@@ -6,6 +6,8 @@ defmodule Minimix do
   * Should return a "shorter" url
   """
 
+  use ExContract
+
   @doc """
   Takes in a valid url returning its equivalent short url.
   """

@@ -1,0 +1,3 @@
+%{
+  "ex_contract": {:hex, :ex_contract, "0.1.2", "ddad452932a5de575bda82dcc69124d510017768defdc242ba6ec36690253e95", [:mix], [], "hexpm", "a5f258da3645156d529771fe0295af0f9d82b259fc20208c6eef69052936eb76"},
+}
