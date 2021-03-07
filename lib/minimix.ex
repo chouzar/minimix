@@ -8,12 +8,17 @@ defmodule Minimix do
 
   use ExContract
 
+  @prefix "https://mini.mix/"
+
   @doc """
   Takes in a valid url returning its equivalent short url.
   """
   @spec shorter_url(url :: String.t()) :: String.t()
+  requires url?(url), "Given string should be a valid url: #{url}"
+  ensures match?(<<@prefix, _ :: binary-size(5)>>, result), "Given string should match prefix: #{@prefix}"
+  ensures String.length(url) > String.length(result), "Generated url should be shorter: \n\turl:\t#{url} \n\tresult:\t#{result}"
   def shorter_url(url) do
-    short_url = "https://mini.mix/" <> id()
+    short_url = @prefix <> id()
     Minimix.Store.put(short_url, url)
     short_url
   end

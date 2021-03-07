@@ -9,6 +9,11 @@ defmodule MinimixTest do
       short_url = Minimix.shorter_url(url)
 
       assert String.length(url) > String.length(short_url)
+
+      url = "https://example.com"
+      short_url = Minimix.shorter_url(url)
+
+      assert String.length(url) > String.length(short_url)
     end
 
   end
