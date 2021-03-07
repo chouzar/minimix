@@ -1,5 +1,15 @@
 defmodule Minimix do
+  @moduledoc """
+  Minimix is a url shortener, current design goals are:
 
+  * Should accept a long url
+  * Should return a "shorter" url
+  """
+
+  @doc """
+  Takes in a valid url returning its equivalent short url.
+  """
+  @spec shorter_url(url :: String.t()) :: String.t()
   def shorter_url(url) do
     short_url = "https://mini.mix/" <> id()
     Minimix.Store.put(short_url, url)
@@ -8,6 +18,7 @@ defmodule Minimix do
 
   @keys ?a..?z |> Enum.to_list()
 
+  @spec id(integer()) :: String.t()
   defp id(max \\ 5) do
     @keys
     |> Enum.shuffle()
