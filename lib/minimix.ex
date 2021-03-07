@@ -28,4 +28,14 @@ defmodule Minimix do
     |> List.to_string()
   end
 
+  @spec url?(String.t()) :: boolean()
+  def url?(url) do
+    case URI.parse url do
+      %{host: nil} -> false
+      %{port: nil} -> false
+      %{scheme: nil} -> false
+      %{} -> true
+    end
+  end
+
 end
