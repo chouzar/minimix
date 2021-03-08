@@ -6,14 +6,8 @@ defmodule MinimixTest do
 
     test "shortens the url" do
       url = "https://parana.pe/es/product/B48G3M73CDCW087MMW5C76TMJTAKLG"
-      short_url = Minimix.shorter_url(url)
 
-      assert String.length(url) > String.length(short_url)
-
-      url = "https://example.com"
-      short_url = Minimix.shorter_url(url)
-
-      assert String.length(url) > String.length(short_url)
+      assert <<"https://mini.mix/", _ :: binary>> = Minimix.shorter_url(url)
     end
 
   end
