@@ -1,3 +1,4 @@
 %{
   "ex_contract": {:hex, :ex_contract, "0.1.2", "ddad452932a5de575bda82dcc69124d510017768defdc242ba6ec36690253e95", [:mix], [], "hexpm", "a5f258da3645156d529771fe0295af0f9d82b259fc20208c6eef69052936eb76"},
+  "stream_data": {:hex, :stream_data, "0.5.0", "b27641e58941685c75b353577dc602c9d2c12292dd84babf506c2033cd97893e", [:mix], [], "hexpm", "012bd2eec069ada4db3411f9115ccafa38540a3c78c4c0349f151fc761b9e271"},
 }
