@@ -21,4 +21,15 @@ defmodule MinimixPropertyTest do
     end
 
   end
+
+  describe "contextual_shorter_url/1" do
+
+    property "works as expected" do
+      check all url <- Minimix.Generator.url() do
+        IO.inspect(url)
+        assert Minimix.contextual_shorter_url(url)
+      end
+    end
+
+  end
 end
