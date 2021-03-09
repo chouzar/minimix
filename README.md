@@ -1,6 +1,6 @@
 # Minimix
 
-**TODO: Add description**
+Contract Programming with elixir Code BEAM V presentation.
 
 ## Installation
 
@@ -10,7 +10,8 @@ by adding `minimix` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:minimix, "~> 0.1.0"}
+    {:minimix, "~> 0.0.9"}
+    {:minimix, git: "https://github.com/chouzar/minimix.git", tag: "main"}
   ]
 end
 ```
