@@ -10,7 +10,6 @@ by adding `minimix` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:minimix, "~> 0.0.9"}
     {:minimix, git: "https://github.com/chouzar/minimix.git", tag: "main"}
   ]
 end
