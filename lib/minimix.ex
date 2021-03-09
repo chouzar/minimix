@@ -78,6 +78,8 @@ defmodule Minimix do
       %{host: nil} -> false
       %{port: nil} -> false
       %{scheme: nil} -> false
+      %{host: ""} -> false
+      %{scheme: ""} -> false
       %{} -> true
     end
   end
